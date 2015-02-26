@@ -9,8 +9,8 @@ func main() {
 	fmt.Println("Time ", time.Now())
 
 	//testAfterWithChannel()
-	testSleep()
-
+	//testSleep()
+	testParseDuration()
 }
 
 func testAfterWithChannel() {
@@ -23,5 +23,12 @@ func testAfterWithChannel() {
 func testSleep() {
 	time.Sleep(2 * time.Second)
 	fmt.Println("2 seconds")
+
+}
+
+func testParseDuration() {
+	var d, e = time.ParseDuration("300ms")
+	fmt.Println("Parse = ", d.Nanoseconds())
+	fmt.Println("Error = ", e)
 
 }
