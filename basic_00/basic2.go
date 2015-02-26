@@ -8,7 +8,9 @@ import (
 func main() {
 	fmt.Println("Time ", time.Now())
 
-	testAfterWithChannel()
+	//testAfterWithChannel()
+	testSleep()
+
 }
 
 func testAfterWithChannel() {
@@ -16,4 +18,10 @@ func testAfterWithChannel() {
 	case <-time.After(5 * time.Second):
 		fmt.Println("5 seconds")
 	}
+}
+
+func testSleep() {
+	time.Sleep(2 * time.Second)
+	fmt.Println("2 seconds")
+
 }
